@@ -1,0 +1,1385 @@
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: linear-gradient(#000091,#8a82d1);
+  background-repeat: no-repeat; 
+  margin: 0;
+  padding: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+#wrapper {
+  position: relative;
+}
+
+#textcontainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* outline: solid; */
+  height: 100px;
+  width: 100%;
+  /* margin-left: 100%; */
+  visibility: hidden;
+  opacity: 0;
+  margin-left: 40vw;
+}
+
+.text {
+  color: black;
+  font-size: 15;
+  background-color: white;
+  padding: 10;
+  border-radius: 10%;
+  font-family: 'Courier New', Courier, monospace;
+
+
+  }
+
+*:has(#d1check:checked) #textcontainer {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 5s;
+}
+
+.zoom-element {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    width: 200vw;
+    height: 200vh;
+    padding: 10px;
+    text-align: center;
+    transform-origin: bottom;
+}
+
+*:has(#check:checked) .zoom-element {
+    transform: scale(0.40);
+    transition-duration: 8s;
+    z-index: 1;
+}
+
+#background1 {
+  position: relative;
+  left: -200px;
+  top: -300px;
+  transform: scale(15%) rotate(-70deg);
+}
+
+.background2 {
+  position: relative;
+  transform: scale(15%) rotate(-90deg);
+  left: -800px;
+  top: -300px;
+}
+
+#background3 {
+  position: relative;
+  left: -200px;
+  top: -300px;
+  transform: scale(15%) rotate(-70deg);
+}
+
+#wrapper {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.line-animation {
+    position: absolute;
+    height: 2px;
+    width: 0; 
+    background-color: rgb(228, 228, 3); 
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 20px rgba(254, 254, 238, 0.568);
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+.container {
+    margin-left:-10vw;
+    width: 85vw;
+    height: 350px;
+    transform: scale(50%);
+}
+
+
+.hidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.line {
+    position: absolute;
+    height: 2px;
+    width: 0; 
+    background-color: rgb(228, 228, 3); 
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 20px rgba(254, 254, 238, 0.568);
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    z-index: 0;
+}
+
+.s1container {
+    visibility: visible;
+    opacity: 1;
+    width: 8vw;
+    margin-left: 5vw;
+    margin-top: 10vw;
+}
+
+.starshadow {
+    position: absolute;
+    font-size: 8vw;
+    color: transparent; 
+    text-shadow: 0 0 12px rgba(128, 128, 1, 0.369), 0 0 12px rgb(136, 136, 34), 0 0 15px rgba(254, 254, 238, 0.568);
+    transform: rotate(-13deg);
+    transition: text-shadow 0.2s ease-in-out; 
+}
+
+.s1shadow {
+    position: absolute;
+    font-size: 8vw;
+    color: transparent; 
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+    transform: rotate(-13deg);
+    transition: text-shadow 0.2s ease-in-out; 
+}
+
+.star1 {
+    position: absolute;
+    height: 8vw;
+    width: 8vw;
+    top: -4.3vw;
+}
+
+.starani1 {
+    animation: rotation 1.5s infinite;
+    animation-play-state: running;
+}
+
+.starani2 {
+    animation: rotation2 1.5s infinite;
+    animation-play-state: running;
+}
+
+.starani3 {
+    animation: rotation3 1.5s infinite;
+    animation-play-state: running;
+}
+
+.starani4 {
+    animation: rotation4 1.5s infinite;
+    animation-play-state: running;
+}
+
+.starani5 {
+    animation: rotation5 1.5s infinite;
+    animation-play-state: running;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(7deg); 
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: rotate(-13deg);
+  }
+  50% {
+    transform: rotate(-6deg); 
+  }
+  100% {
+    transform: rotate(-13deg);
+  }
+}
+
+@keyframes rotation3 {
+  0% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(2deg); 
+  }
+  100% {
+    transform: rotate(9deg);
+  }
+}
+
+@keyframes rotation4 {
+  0% {
+    transform: rotate(16deg);
+  }
+  50% {
+    transform: rotate(22deg); 
+  }
+  100% {
+    transform: rotate(16deg);
+  }
+}
+
+@keyframes rotation5 {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(17deg); 
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+#s1:hover .starani1, #s1:hover .starani2, #s1:hover .starshadow{
+    animation-play-state: paused;
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+.line1 {
+    margin-left: 9.5vw;
+    margin-top: 12vw;
+    transform: rotate(40deg);
+    transform-origin: left;
+    animation-name: increase;
+    animation-duration: 0.6s;
+}
+
+@keyframes increase {
+  100% {
+    width: 25vw;
+  }
+}
+
+#s1check:checked ~ .container > .s1container > .starshadow {
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+#s1check:checked ~ .container .line {
+    animation-play-state: running;
+}
+
+#s1check:checked ~ .container .s2container {
+    visibility: visible;
+    opacity: 1;
+}
+
+#s1check:checked ~ .container .line2 {
+    animation-play-state: running;
+}
+
+#s1check:checked ~ .container .s3container {
+    visibility: visible;
+    opacity: 1;
+}
+
+#s1check:checked ~ .container .line3 {
+    animation-play-state: running;
+}
+
+#s1check:checked ~ .container .s4container {
+    visibility: visible;
+    opacity: 1;
+}
+
+#s1check:checked ~ .container .line4 {
+    animation-play-state: running;
+}
+
+#s1check:checked ~ .container .s5container {
+    visibility: visible;
+    opacity: 1;
+}
+
+#s1check:checked ~ .container .blocker {
+  z-index: 10;
+
+}
+
+*:has(#s1check:checked) #scrp1container {
+  visibility: visible;
+  opacity: 1;
+}
+
+.s2container {
+    width: 6vw;
+    margin-left: 26vw;
+    margin-top: 29vw;
+    animation-name: rotation2;
+    transition-property: opacity;
+    transition-delay: 0.8s;
+    transition-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transform: rotate(15deg);
+}
+
+.star2 {
+    position: absolute;
+    height: 6vw;
+    width: 6vw;
+    top: -3vw;
+}
+
+.starshadow2 {
+    position: absolute;
+    font-size: 6vw;
+    color: transparent; 
+    transform: rotate(10deg);
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+.line2 {
+    margin-left: 28vw;
+    margin-top: 29vw;
+    transform-origin: left;
+    animation-name: increase2;
+    animation-delay: 1s;
+    animation-duration: 0.4s;
+}
+
+#s2check:checked ~ .line2 {
+    animation-play-state: running;
+}
+
+@keyframes increase2 {
+  100% {
+    width: 20vw;
+  }
+}
+
+.s3container {
+    width: 7vw;
+    margin-left: 47vw;
+    margin-top: 29vw;
+    transition-property: opacity;
+    transition-delay: 1.7s;
+    transition-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transform: rotate(-20deg);
+}
+
+.starshadow3 {
+    position: absolute;
+    font-size: 7vw;
+    color: transparent; 
+    transform: rotate(10deg);
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+.star3 {
+    position: absolute;
+    height: 7vw;
+    width: 7vw;
+}
+
+.line3 {
+    margin-left: 49.5vw;
+    margin-top: 29vw;
+    transform-origin: left;
+    transform: rotate(60deg);
+    animation-name: increase3;
+    animation-delay: 2s;
+    animation-duration: 0.4s;
+}
+
+@keyframes increase3 {
+  100% {
+    width: 23vw;
+  }
+}
+
+.s4container {
+    width: 7vw;
+    margin-left: 58vw;
+    margin-top: 48vw;
+    transition-property: opacity;
+    transition-delay: 2.5s;
+    transition-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transform: rotate(-40deg);
+}
+
+.starshadow4 {
+    position: absolute;
+    font-size: 5vw;
+    color: transparent; 
+    transform: rotate(10deg);
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+.star4 {
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+}
+
+.line4 {
+    margin-left: 60vw;
+    margin-top: 50vw;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    animation-name: increase4;
+    animation-delay: 2.8s;
+    animation-duration: 0.3s;
+}
+
+@keyframes increase4 {
+  100% {
+    width: 20vw;
+  }
+}
+
+.s5container {
+    width: 8vw;
+    margin-left: 69.5vw;
+    margin-top: 35vw;
+    transition-property: opacity;
+    transition-delay: 3.2s;
+    transition-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+
+.starshadow5 {
+    position: absolute;
+    font-size: 8vw;
+    color: transparent; 
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+    transform: rotate(2deg);
+    transition: text-shadow 0.2s ease-in-out; 
+}
+
+.star5 {
+    position: absolute;
+    height: 8vw;
+    width: 8vw;
+    top: -4.3vw;
+}
+
+.blocker {
+  position: absolute;
+  width: 20vw;
+  height: 20vh;
+  background-color: transparent;
+  z-index: 0;
+  transition-delay: 1s;
+}
+
+.shidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+}
+
+.container2 {
+  position: relative;
+  width: 50vw;
+  height: 300px;;
+  margin-top: -15vw;
+  margin-left: 60vw;
+  transform: scale(50%);
+}
+
+.s2container:hover .starani5, .s2container:hover .starani1, .s2container:hover ~ #scp1shadow{
+    animation-play-state: paused;
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+#s2check:checked ~ .container2 > #scrp1container > .scp1shadow {
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+#s2check:checked ~ .container2 .sline1 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp2container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline2 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp3container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline3 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp4container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline4 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp5container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline5 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp6container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline6 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp7container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline7 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp8container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline8 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp9container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline9 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp10container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline10 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp11container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline11 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp12container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#s2check:checked ~ .container2 #sline12 {
+  animation-play-state: running;
+}
+
+#s2check:checked ~ .container2 #scrp13container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#scrp1container {
+  position: absolute;
+  margin-top: -10vw;
+  animation-name: rotation;
+  transition-delay: 4.5s;
+}
+
+#sc1 {
+  top: 0.5vw;
+  left: 0.2vw;
+}
+
+.scp1shadow {
+    position: absolute;
+    font-size: 6vw;
+    color: transparent; 
+    text-shadow: 0 0 12px rgba(128, 128, 1, 0.369), 0 0 12px rgb(136, 136, 34), 0 0 15px rgba(254, 254, 238, 0.568);
+    transition: text-shadow 0.2s ease-in-out; 
+}
+
+.sline1 {
+    position: absolute;
+    margin-top: -5vw;
+    margin-left: 29vw;
+    transform: rotate(75deg);
+    transform-origin: left;
+    animation-name: increase5;
+    animation-delay: 0.1s;
+    animation-duration: 0.3s;
+}
+
+
+@keyframes increase5 {
+  100% {
+    width: 20vw;
+  }
+}
+
+.scpshadow {
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+#scrp2container {
+  position: absolute;
+  margin-top: 10vw;
+  margin-left: 32vw;
+  transform: rotate(10deg);
+  transition-property: opacity;
+  transition-delay: 0.7s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc2 {
+  position: absolute;
+  margin-top: 5vw;
+  margin-left: -4vw;
+}
+
+#scrp3container {
+  position: absolute;
+  margin-top: 30vw;
+  margin-left: 27vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 1.4s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc3 {
+  position: absolute;
+  margin-top: 0.7vw;
+  margin-left: -3.5vw;
+}
+
+#sline2 {
+    position: absolute;
+    margin-left: 35vw;
+    margin-top: 14vw;
+    transform: rotate(100deg);
+    transform-origin: left;
+    animation-name: increase6;
+    animation-duration: 0.3s;
+    animation-delay: 1s;
+}
+
+@keyframes increase6 {
+  100% {
+    width: 18vw;
+  }
+}
+
+#scrp4container {
+  position: absolute;
+  margin-left: 27.5vw;
+  margin-top: 50vw;
+  transition-property: opacity;
+  transition-delay: 1.8s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc4 {
+  position: absolute;
+  margin-top: 5vw;
+  margin-left: -4vw;
+}
+
+#sline3 {
+    position: absolute;
+    margin-left: 32vw;
+    margin-top: 34vw;
+    transform: rotate(91deg);
+    transform-origin: left;
+    animation-name: increase7;
+    animation-duration: 0.3s;
+    animation-delay: 1.4s;
+}
+
+@keyframes increase7 {
+  100% {
+    width: 18vw;
+  }
+}
+
+#scrp5container {
+  position: absolute;
+  margin-left: -15vw;
+  margin-top: 22vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 1.4s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc5 {
+  position: absolute;
+  margin-top: 1.5vw;
+  margin-left: -3vw;
+}
+
+#sline4 {
+    position: absolute;
+    margin-left: 32vw;
+    margin-top: 16vw;
+    transform: rotate(166deg);
+    transform-origin: left;
+    animation-name: increase8;
+    animation-duration: 0.3s;
+    animation-delay: 1s;
+    /* animation-play-state: running; */
+}
+
+@keyframes increase8 {
+  100% {
+    width: 42vw;
+  }
+}
+
+#scrp6container {
+  position: absolute;
+  margin-left: -30vw;
+  margin-top: 30vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 2s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc6 {
+  position: absolute;
+  margin-top: 3.5vw;
+  margin-left: -3vw;
+}
+
+#sline5 {
+    position: absolute;
+    margin-left:-11vw;
+    margin-top: 27vw;
+    transform: rotate(157deg);
+    transform-origin: left;
+    animation-name: increase9;
+    animation-duration: 0.3s;
+    animation-delay: 1.4s;
+    /* animation-play-state: running; */
+}
+
+@keyframes increase9 {
+  100% {
+    width: 15vw;
+  }
+}
+
+#scrp7container {
+  position: absolute;
+  margin-left: -40vw;
+  margin-top: 44vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 2.6s;
+  transition-duration: 0.3s;
+  animation-fill-mode: forwards;
+  transform: scale(80%);
+}
+
+#sc7 {
+  position: absolute;
+  margin-top: 4.5vw;
+  margin-left: -3vw;
+}
+
+#sline6 {
+    position: absolute;
+    margin-left: -26.5vw;
+    margin-top: 35vw;
+    transform: rotate(125deg);
+    transform-origin: left;
+    animation-name: increase10;
+    animation-duration: 0.2s;
+    animation-delay: 2.5s;
+    /* animation-play-state: running; */
+}
+
+@keyframes increase10 {
+  100% {
+    width: 15vw;
+  }
+}
+
+#scrp8container {
+  position: absolute;
+  margin-left: -50vw;
+  margin-top: 85vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 3.4s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc8 {
+  position: absolute;
+  margin-top: 5vw;
+  margin-left: -4vw;
+}
+
+.sc8shadow {
+  text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+#sline7 {
+    position: absolute;
+    margin-left:-36vw;
+    margin-top: 48vw;
+    transform: rotate(103deg);
+    transform-origin: left;
+    animation-name: increase11;
+    animation-duration: 0.3s;
+    animation-delay: 3.2s;
+    /* animation-play-state: running; */
+}
+
+@keyframes increase11 {
+  100% {
+    width: 42vw;
+  }
+}
+
+#scrp9container {
+  position: absolute;
+  margin-left: -51.5vw;
+  margin-top: 130vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 4.1s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc9 {
+  position: absolute;
+  margin-top: 3vw;
+  margin-left: -3vw;
+}
+
+#sline8 {
+    position: absolute;
+    margin-left:-46vw;
+    margin-top: 90vw;
+    transform: rotate(92deg);
+    transform-origin: left;
+    animation-name: increase11;
+    animation-duration: 0.3s;
+    animation-delay: 3.7s;
+}
+
+#scrp10container {
+  position: absolute;
+  margin-top: 135vw;
+  margin-left: -80vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 5s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc10 {
+  position: absolute;
+  margin-top: 1.5vw;
+  margin-left: -3.5vw;
+}
+
+#sline9 {
+    position: absolute;
+    margin-left:-49vw;
+    margin-top: 133vw;
+    transform: rotate(165deg);
+    transform-origin: left;
+    animation-name: increase12;
+    animation-duration: 0.3s;
+    animation-delay: 4.6s;
+}
+
+@keyframes increase12 {
+  100% {
+    width: 28vw;
+  }
+}
+
+#scrp11container {
+  position: absolute;
+  margin-top: 137vw;
+  margin-left: -110vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 5.8s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc11 {
+  position: absolute;
+  margin-top: 5vw;
+  margin-left: -4vw;
+}
+
+#sline10 {
+    position: absolute;
+    margin-left:-75vw;
+    margin-top: 139.5vw;
+    transform: rotate(175deg);
+    transform-origin: left;
+    animation-name: increase13;
+    animation-duration: 0.3s;
+    animation-delay: 5.4s;
+    /* animation-play-state: running; */
+}
+
+@keyframes increase13 {
+  100% {
+    width: 28vw;
+  }
+}
+
+#scrp12container {
+  position: absolute;
+  margin-top: 107vw;
+  margin-left: -135vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 6.5s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sc12 {
+  position: absolute;
+  margin-top: 1.5vw;
+  margin-left: -3.5vw;
+}
+
+#sline11 {
+    position: absolute;
+    margin-left:-107vw;
+    margin-top: 141vw;
+    transform: rotate(-127deg);
+    transform-origin: left;
+    animation-name: increase14;
+    animation-duration: 0.3s;
+    animation-delay: 6.1s;
+}
+
+@keyframes increase14 {
+  100% {
+    width: 35vw;
+  }
+}
+
+#scrp13container {
+  position: absolute;
+  margin-top: 75vw;
+  margin-left: -110vw;
+  z-index: 5;
+  transition-property: opacity;
+  transition-delay: 7.2s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+#sline12 {
+    position: absolute;
+    margin-left:-130vw;
+    margin-top: 113vw;
+    transform: rotate(-55deg);
+    transform-origin: left;
+    animation-name: increase15;
+    animation-duration: 0.3s;
+    animation-delay: 6.8s;
+}
+
+@keyframes increase15 {
+  100% {
+    width: 42vw;
+  }
+}
+
+#block2 {
+  margin-left: 15vw;
+  margin-top: -20vw;
+}
+
+#s2check:checked ~ .container2 #block2 {
+  z-index: 10;
+}
+
+*:has(#s2check:checked) #d1container {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container3 {
+  position: relative;
+  width: 30vw;
+  height: 300px;
+  margin-top: 0vw;
+  margin-left: 70vw;
+  transform: scale(50%);
+}
+
+#d1container:hover .starani2, #d1container:hover .starani1, #d1container:hover ~ .starshadow {
+    animation-play-state: paused;
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+#d1check:checked ~ .container3 > #d1container > .starshadow {
+    text-shadow: 0 0 40px rgba(255, 255, 0, 0.369), 0 0 20px rgb(255, 255, 0), 0 0 30px rgba(254, 254, 238, 0.568);
+}
+
+#d1check:checked ~ .container3 #dline1 {
+  animation-play-state: running;
+}
+
+#d1check:checked ~ .container3 #d2container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#d1check:checked ~ .container3 #dline2 {
+  animation-play-state: running;
+}
+
+#d1check:checked ~ .container3 #d3container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#d1check:checked ~ .container3 #dline3 {
+  animation-play-state: running;
+}
+
+#d1check:checked ~ .container3 #d4container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#d1check:checked ~ .container3 #dline4 {
+  animation-play-state: running;
+}
+
+#d1check:checked ~ .container3 #d5container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#d1check:checked ~ .container3 #dline5 {
+  animation-play-state: running;
+}
+
+#d1check:checked ~ .container3 #d6container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#d1check:checked ~ .container3 #dline6 {
+  animation-play-state: running;
+}
+
+#d1check:checked ~ .container3 #d6container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#d1check:checked ~ .container3 #dline6 {
+  animation-play-state: running;
+}
+
+#d1check:checked ~ .container3 #d7container {
+  visibility: visible;
+  opacity: 1;
+}
+
+#d1check:checked ~ .container3 #dline7 {
+  animation-play-state: running;
+}
+
+#d1container {
+  position: absolute;
+  margin-top: -1vw;
+  margin-left: 1vw;
+  transform: rotate(10deg);
+  transition-property: opacity;
+  transition-delay: 7.6s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+#d1 {
+  position: absolute;
+  margin-top: 5vw;
+}
+
+#d2container {
+  position: absolute;
+  margin-top: 35vw;
+  margin-left: -03vw;
+  transform: rotate(10deg);
+  transition-property: opacity;
+  transition-delay: 0.5s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+#dline1 {
+    position: absolute;
+    margin-top: 5vw;
+    margin-left: 4vw;
+    transform: rotate(95deg);
+    transform-origin: left;
+    animation-name: l1;
+    animation-duration: 0.3s;
+    animation-delay: 0.1s;
+    z-index: 1;
+}
+
+@keyframes l1 {
+  100% {
+    width: 32vw;
+  }
+}
+
+#d3container {
+  position: absolute;
+  margin-top: 55vw;
+  margin-left: -23vw;
+  transform: rotate(10deg);
+  transition-property: opacity;
+  transition-delay: 1.2s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+#d3 {
+  position: absolute;
+  margin-top: 0.7vw;
+  margin-left: -3vw;
+}
+
+#dline2 {
+    position: absolute;
+    margin-top: 40vw;
+    margin-left:0vw;
+    transform: rotate(135deg);
+    transform-origin: left;
+    animation-name: l2;
+    animation-duration: 0.3s;
+    animation-delay: 0.8s;
+    z-index: 1;
+}
+
+@keyframes l2 {
+  100% {
+    width: 30vw;
+  }
+}
+
+#d4container {
+  position: absolute;
+  margin-top: 85vw;
+  margin-left: -40vw;
+  transform: rotate(10deg);
+  transition-property: opacity;
+  transition-delay: 1.9s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+#d4 {
+  position: absolute;
+  margin-top: 5vw;
+  margin-left: -3.5vw;
+}
+
+#dline3 {
+    position: absolute;
+    margin-top: 60vw;
+    margin-left:-20.5vw;
+    transform: rotate(118deg);
+    transform-origin: left;
+    animation-name: l3;
+    animation-duration: 0.3s;
+    animation-delay: 1.5s;
+    z-index: 1;
+}
+
+@keyframes l3 {
+  100% {
+    width: 33vw;
+  }
+}
+
+#d5container {
+  position: absolute;
+  margin-top: 150vw;
+  margin-left: -110vw;
+  transform: rotate(10deg);
+  transition-property: opacity;
+  transition-delay: 2.8s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+#d5 {
+  position: absolute;
+  margin-left: -3vw;
+}
+
+#dline4 {
+    position: absolute;
+    margin-top: 90vw;
+    margin-left:-36vw;
+    transform: rotate(138deg);
+    transform-origin: left;
+    animation-name: l4;
+    animation-duration: 0.5s;
+    animation-delay: 2.2s;
+    z-index: 1;
+}
+
+@keyframes l4 {
+  100% {
+    width: 95vw;
+  }
+}
+
+#d6container {
+  position: absolute;
+  margin-top: 135vw;
+  margin-left: -2vw;
+  transform: rotate(10deg);
+  transition-property: opacity;
+  transition-delay: 2.8s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+#dline5 {
+    position: absolute;
+    margin-top: 91vw;
+    margin-left:-36vw;
+    transform: rotate(52deg);
+    transform-origin: left;
+    animation-name: l5;
+    animation-duration: 0.5s;
+    animation-delay: 2.2s;
+    z-index: 1;
+    /* animation-play-state: running; */
+}
+
+@keyframes l5 {
+  100% {
+    width: 60vw;
+  }
+}
+
+#d7container {
+  position: absolute;
+  margin-top: 170vw;
+  margin-left: -75vw;
+  transform: rotate(10deg);
+  transition-property: opacity;
+  transition-delay: 2.8s;
+  transition-duration: 0.2s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+#dline6 {
+    position: absolute;
+    margin-top: 140vw;
+    transform: rotate(154deg);
+    transform-origin: left;
+    animation-name: l6;
+    animation-duration: 0.5s;
+    animation-delay: 3.1s;
+    z-index: 1;
+}
+
+@keyframes l6 {
+  100% {
+    width: 80vw;
+  }
+}
+
+#dline7 {
+    position: absolute;
+    margin-top: 155vw;
+    margin-left: -105vw;
+    transform: rotate(32deg);
+    transform-origin: left;
+    animation-name: l7;
+    animation-duration: 0.5s;
+    animation-delay: 3.1s;
+    z-index: 1;
+}
+
+@keyframes l7 {
+  100% {
+    width: 40vw;
+  }
+}
