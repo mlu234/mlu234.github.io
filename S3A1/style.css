@@ -1,0 +1,80 @@
+html {
+    background-color:rgb(22, 22, 22);
+}
+
+.text {
+    font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+    color: rgb(3, 198, 3);
+}
+
+label {
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+.text-code {
+    font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+    font-size: 15px;
+}
+
+.code-format {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.tab { 
+    margin-left: 40px; 
+}
+
+.box {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    background-color: rgb(233, 230, 230);
+    margin-top: 10px;
+    left: center;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.bar {
+    border-collapse: collapse;
+    margin-top: 50px;
+
+}
+
+.style {
+    font-family: "Consolas", "Monaco", "Lucida Console", monospace;
+    width: 100px;
+    height: 30px;
+    outline: 1px solid rgb(89, 88, 92);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 200px;
+    color: rgb(139, 139, 144);
+}
+
+/* Show the correct content when a radio is checked */
+#CSS-check:checked ~ #CSS,
+#HTML-check:checked ~ #HTML,
+#Python-check:checked ~ #Python,
+#Text-check:checked ~ #text {
+  display: block;
+}
+
+/* Optional: Style the active label (tab header) */
+#CSS-check:checked ~ .bar #c2,
+#HTML-check:checked ~ .bar #c1,
+#Python-check:checked ~ .bar #c3,
+#Text-check:checked ~ .bar #c4 {
+  color: rgb(12, 12, 12);
+  background: rgb(95, 233, 3);
+}
+
+#HTML, #CSS, #Python, #text {
+    display: none;
+}
+
