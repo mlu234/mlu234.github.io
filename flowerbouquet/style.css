@@ -1,0 +1,96 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(253,229,234)
+}
+canvas {
+  display: relative;
+  outline: 5px solid rgb(250,119,135);
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: calc(50% - 300px);
+  border-radius: 20px;
+}
+
+#bow {
+  display: relative;
+  background-color: rgb(252,157,173);
+  font-family: monospace;
+  color: white;
+  border: 3px solid rgb(207,104,122);
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 20px;
+    
+  
+}
+
+#bow:hover {
+  background-color: rgb(235, 88, 115)
+}
+
+#add {
+  background-color: rgb(252,157,173);
+  font-family: monospace;
+  color: white;
+  border: 3px solid rgb(207,104,122);
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: calc(50% - 300px)
+}
+
+#add:hover {
+  background-color: rgb(235, 88, 115)
+}
+
+#clear {
+  background-color: rgb(252,157,173);
+  font-family: monospace;
+  color: white;
+  border: 3px solid rgb(207,104,122);
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 30px
+}
+
+
+#clear:hover {
+  background-color: rgb(235, 88, 115)
+}
+
+#save {
+  background-color: rgb(252,157,173);
+  font-family: monospace;
+  color: white;
+  border: 3px solid rgb(207,104,122);
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 30px
+}
+
+#save:hover {
+  background-color: rgb(235, 88, 115)
+}
+
+.style {
+  font-family: monospace;
+  color: rgb(252,4,108);
+  font-size: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.header {
+  color: rgb(252,4,108);
+  font-size: 80px;
+  text-align: center;
+  margin-top:20px;
+}
